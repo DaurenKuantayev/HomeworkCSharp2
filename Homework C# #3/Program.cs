@@ -7,7 +7,8 @@
 Console.Clear();
 Console.WriteLine("Введите число");
 int numberA = Convert.ToInt32(Console.ReadLine());
-  if (numberA == 6 || numberA == 7) {
+  if (numberA == 6 || numberA == 7) 
+  {
   Console.WriteLine($"{numberA} -> да");
   }
   else if (numberA < 1 || numberA > 7) {

@@ -7,12 +7,16 @@
 // 32679 -> 6
 
 Console.Clear();
-Console.WriteLine("Введите число");
-int numberA = Convert.ToInt32(Console.ReadLine());
-  if (numberA == 6 || numberA == 7) {
-  Console.WriteLine("(этот день выходной) -> да");
-  }
-  else if (numberA < 1 || numberA > 7) {
-    Console.WriteLine("это вообще не день недели");
-  }
-  else Console.WriteLine("(этот день не выходной) -> нет");
+Console.WriteLine("Введите число ");
+int number = Convert.ToInt32(Console.ReadLine());
+int bufferNumb = number;
+
+while (number > 1000)
+    number = number / 10;
+if (number < 100) 
+    Console.WriteLine("В введеном числе нет третьей цифры");
+else
+{
+    int thirdNumber = number % 10;
+    Console.WriteLine($"Третье цифра чиcла {bufferNumb} - {thirdNumber}");
+}
